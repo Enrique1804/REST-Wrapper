@@ -1,0 +1,18 @@
+type Item {
+  itemId: Int!
+  itemName: String!
+  description: String!
+  location: Location!
+}
+
+type Location {
+  locationId: Int!
+  state: String!
+  address: String!
+  phoneNumber: String!
+}
+
+type Query {
+  Items: [Item!]!
+  Item(itemId: Int!): Item
+}
